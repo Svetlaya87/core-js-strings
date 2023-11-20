@@ -351,15 +351,14 @@ function isPalindrome(str) {
   // throw new Error('Not implemented');
   let str2 = str.toLowerCase();
 
-  str2 = str2
-    .split('')
-    .filter((el) => el !== ' ' && el !== ',' && el !== '!' && el !== '?');
+  str2 = str2.split('').filter((el) => el.toLowerCase() !== el.toUpperCase());
 
   for (let i = 0; i < Math.trunc(str2.length / 2); i += 1) {
     if (str2[i] !== str2[str2.length - 1 - i]) {
       return false;
     }
   }
+
   return true;
 }
 
