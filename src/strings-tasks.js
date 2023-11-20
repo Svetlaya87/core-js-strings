@@ -178,6 +178,7 @@ function removeLastOccurrences(str, value) {
   const string = str;
   const res = string.lastIndexOf(value);
 
+  
   return str.lastIndexOf(value) !== -1
     ? string.slice(0, res).concat(string.slice(res + value.length))
     : str;
